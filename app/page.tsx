@@ -1,5 +1,6 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
+import ProviderCarousel from "@/components/ProviderCarousel";
 
 export default function Home() {
   return (
@@ -69,19 +70,8 @@ export default function Home() {
                     </div>
                   </div>
 
-                  <div className="space-y-3">
-                    <div className="flex items-center justify-between text-sm">
-                      <span className="text-muted-foreground">ASI Alliance</span>
-                      <span className="text-green-500 font-medium">Available</span>
-                    </div>
-                    <div className="flex items-center justify-between text-sm">
-                      <span className="text-muted-foreground">OpenRouter</span>
-                      <span className="text-green-500 font-medium">Available</span>
-                    </div>
-                    <div className="flex items-center justify-between text-sm">
-                      <span className="text-muted-foreground">Anthropic Claude</span>
-                      <span className="text-green-500 font-medium">Available</span>
-                    </div>
+                  <div>
+                    <ProviderCarousel />
                   </div>
                 </div>
               </div>
@@ -206,7 +196,7 @@ export default function Home() {
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
                   Access elite AI models from Artificial Superintelligence Alliance,
-                  OpenAI's GPT series, Anthropic's Claude, and Deepseek models—all through
+                  OpenAI&Apos;s GPT series, Anthropic&apos;s Claude, and Deepseek models—all through
                   one unified, permissionless marketplace interface.
                 </p>
               </div>
@@ -336,20 +326,7 @@ export default function Home() {
               </Button>
             </div>
 
-            <div className="flex items-center justify-center space-x-8 text-sm text-muted-foreground">
-              <div className="flex items-center space-x-2">
-                <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
-                <span>ASI Alliance</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <div className="w-2 h-2 bg-blue-500 rounded-full animate-pulse" />
-                <span>OpenRouter</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <div className="w-2 h-2 bg-purple-500 rounded-full animate-pulse" />
-                <span>Deepseek</span>
-              </div>
-            </div>
+            <ProviderCarousel />
           </div>
         </div>
       </section>
