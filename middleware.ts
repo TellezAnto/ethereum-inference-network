@@ -58,5 +58,5 @@ export const middleware = paymentMiddleware(
 );
 
 export const config = {
-  matcher: ["/api/asi/**", "/api/walrus/**"],
+  matcher: ["/api/asi/:path*", "/api/walrus/:path*", "/api/open-router/:path*"],
 };
