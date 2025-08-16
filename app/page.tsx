@@ -28,21 +28,27 @@ export default function Home() {
 
       {/* Hero Section */}
       <section className="relative py-20 px-4">
-        <div className="container mx-auto text-center max-w-4xl">
-          <h1 className="text-5xl md:text-7xl font-bold font-[var(--font-heading)] mb-6 bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">
-            Unlock a New AI Economy
-          </h1>
-          <p className="text-xl md:text-2xl font-[var(--font-heading)] mb-4 text-muted-foreground">
-            A Global Compute Layer for the Onchain World
-          </p>
-          <p className="text-lg mb-8 text-muted-foreground max-w-3xl mx-auto">
-            Infernet is a permissionless P2P network connecting idle GPU power with AI agents and developers, enabling
-            dynamic pricing and trustless, per-request micropayments with X402.
-          </p>
-          <Button size="lg" className="glow text-lg px-8 py-4">
-            Launch App
-          </Button>
-        </div>
+       <div className="container mx-auto text-center max-w-5xl py-20 md:py-32 lg:py-48 px-4">
+    {/* Headline Principal - Más audaz y con gradiente */}
+    <h1 className="text-4xl sm:text-6xl md:text-7xl font-bold font-[var(--font-heading)] mb-6 text-transparent bg-clip-text bg-gradient-to-r from-teal-400 via-primary-500 to-indigo-600 animate-gradient-slow-pulse">
+        Unlock a New AI Economy
+    </h1>
+
+    {/* Sub-headline - Más directa y con un toque de marca */}
+    <p className="text-lg md:text-xl font-medium font-[var(--font-heading)] mb-4 text-muted-foreground max-w-2xl mx-auto">
+        Infernet: The Global Compute Layer for the Onchain World.
+    </p>
+    
+    {/* Descripción - Más concisa y al grano */}
+    <p className="text-md sm:text-lg mb-8 text-muted-foreground max-w-3xl mx-auto">
+        A permissionless P2P network connecting idle GPU power with AI agents and developers, enabling dynamic pricing and trustless, per-request micropayments.
+    </p>
+    
+    {/* Botón CTA - Más grande y con un icono para reforzar la acción */}
+    <Button size="lg" className="text-xl px-12 py-6 animate-glow-pulse shadow-2xl shadow-primary-500/50">
+        Launch App
+    </Button>
+</div>
 
         {/* Hero Illustration */}
         <div className="mt-16 flex justify-center">
@@ -271,7 +277,7 @@ console.log(result.output)`}</code>
             </div>
           </div>
           <div className="mt-8 pt-8 border-t border-border text-center text-sm text-muted-foreground">
-            © 2024 Infernet. All rights reserved.
+            © 2025 Infernet. All rights reserved.
           </div>
         </div>
       </footer>
