@@ -43,12 +43,6 @@ export async function GET(
     const { provider, model } = resolvedParams;
     const fullId = `${provider}/${model}`;
 
-    // TODO: Implement x402 hash verification here
-    const x402Hash = request.headers.get('x402-hash');
-
-    if (!x402Hash) {
-      return NextResponse.json({ error: 'x402 hash verification required' }, { status: 402 });
-    }
 
     // Use environment variable for OpenRouter API calls
     const token = process.env.OPENROUTER_API_KEY;

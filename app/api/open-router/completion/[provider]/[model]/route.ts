@@ -63,11 +63,6 @@ export async function POST(
     const { provider, model } = resolvedParams;
     const fullModelId = `${provider}/${model}`;
 
-    const x402Hash = request.headers.get('x402-hash');
-    
-    if (!x402Hash) {
-      return NextResponse.json({ error: 'x402 hash verification required' }, { status: 402 });
-    }
 
     const token = process.env.OPENROUTER_API_KEY;
     
