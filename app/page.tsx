@@ -1,5 +1,5 @@
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 export default function Home() {
   return (
@@ -8,17 +8,26 @@ export default function Home() {
       <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container mx-auto flex h-16 items-center justify-between px-4">
           <div className="flex items-center space-x-2">
-            <div className="h-8 w-8 rounded bg-gradient-to-r from-primary to-secondary"></div>
+            <div className="h-8 w-8 rounded bg-gradient-to-r from-primary to-secondary" />
             <span className="text-xl font-bold font-[var(--font-heading)]">Infernet</span>
           </div>
           <nav className="hidden md:flex items-center space-x-6">
-            <a href="#how-it-works" className="text-muted-foreground hover:text-accent transition-colors">
+            <a
+              href="#how-it-works"
+              className="text-muted-foreground hover:text-accent transition-colors"
+            >
               How It Works
             </a>
-            <a href="#developers" className="text-muted-foreground hover:text-accent transition-colors">
+            <a
+              href="#developers"
+              className="text-muted-foreground hover:text-accent transition-colors"
+            >
               For Developers
             </a>
-            <a href="#features" className="text-muted-foreground hover:text-accent transition-colors">
+            <a
+              href="#features"
+              className="text-muted-foreground hover:text-accent transition-colors"
+            >
               Features
             </a>
             <Button className="glow">Get Started</Button>
@@ -26,261 +35,137 @@ export default function Home() {
         </div>
       </header>
 
-      {/* Hero Section */}
-      <section className="relative py-20 px-4">
-       <div className="container mx-auto text-center max-w-5xl py-20 md:py-32 lg:py-48 px-4">
-    {/* Headline Principal - Más audaz y con gradiente */}
-    <h1 className="text-4xl sm:text-6xl md:text-7xl font-bold font-[var(--font-heading)] mb-6 text-transparent bg-clip-text bg-gradient-to-r from-teal-400 via-primary-500 to-indigo-600 animate-gradient-slow-pulse">
-        Unlock a New AI Economy
-    </h1>
-
-    {/* Sub-headline - Más directa y con un toque de marca */}
-    <p className="text-lg md:text-xl font-medium font-[var(--font-heading)] mb-4 text-muted-foreground max-w-2xl mx-auto">
-        Infernet: The Global Compute Layer for the Onchain World.
-    </p>
-    
-    {/* Descripción - Más concisa y al grano */}
-    <p className="text-md sm:text-lg mb-8 text-muted-foreground max-w-3xl mx-auto">
-        A permissionless P2P network connecting idle GPU power with AI agents and developers, enabling dynamic pricing and trustless, per-request micropayments.
-    </p>
-    
-    {/* Botón CTA - Más grande y con un icono para reforzar la acción */}
-    <Button size="lg" className="text-xl px-12 py-6 animate-glow-pulse shadow-2xl shadow-primary-500/50">
-        Launch App
-    </Button>
-</div>
-
-        {/* Hero Illustration */}
-        <div className="mt-16 flex justify-center">
-          <div className="relative w-full max-w-2xl">
-            <div className="grid grid-cols-3 gap-4 opacity-20">
-              {Array.from({ length: 9 }).map((_, i) => (
-                <div
-                  key={i}
-                  className="h-16 w-16 rounded-lg bg-gradient-to-br from-primary/30 to-secondary/30 animate-pulse"
-                  style={{ animationDelay: `${i * 0.2}s` }}
-                ></div>
-              ))}
+      {/* Hero Section - The big intro */}
+      <section className="relative py-20 px-4 md:py-32 lg:py-48">
+        <div className="container mx-auto max-w-7xl">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+            {/* Left Column: Main Content */}
+            <div className="text-center lg:text-left">
+              <h1 className="text-4xl sm:text-6xl md:text-7xl font-bold font-[var(--font-heading)] mb-6 text-transparent bg-clip-text bg-gradient-to-r from-teal-400 via-sky-500 to-primary-600 animate-gradient-slow">
+                Unlock a New AI Economy
+              </h1>
+              <p className="text-xl md:text-2xl font-medium font-[var(--font-heading)] mb-4 text-muted-foreground">
+                The Global Compute Layer for the Onchain World.
+              </p>
+              <p className="text-lg mb-8 text-muted-foreground max-w-2xl lg:max-w-none mx-auto lg:mx-0">
+                Infernet is a permissionless P2P network connecting idle GPU power with AI agents and developers, enabling dynamic pricing and trustless, per-request micropayments.
+              </p>
+              <Button size="lg" className="text-xl px-12 py-6 animate-glow-pulse shadow-2xl shadow-primary/40">
+                Launch App
+              </Button>
             </div>
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="h-24 w-24 rounded-full bg-gradient-to-r from-primary to-secondary glow"></div>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      {/* Problem & Opportunity Section */}
-      <section className="py-20 px-4 bg-card/50">
-        <div className="container mx-auto max-w-6xl">
-          <div className="grid md:grid-cols-2 gap-12">
-            <Card className="border-destructive/20">
-              <CardHeader>
-                <CardTitle className="text-2xl font-[var(--font-heading)] text-destructive">
-                  The Centralized Bottleneck
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <div className="flex items-center space-x-3">
-                  <div className="h-2 w-2 rounded-full bg-destructive"></div>
-                  <span>Fixed pricing and high costs</span>
+            {/* Right Column: Placeholder for Illustration/Diagram */}
+            <div className="relative w-full aspect-square md:aspect-video lg:aspect-square flex justify-center items-center p-8 lg:p-12">
+              <div className="relative w-full h-full bg-card rounded-2xl border border-border/50 shadow-2xl">
+                <div className="absolute inset-0 flex items-center justify-center p-6 text-muted-foreground text-center animate-pulse">
+                  <div className="flex flex-col items-center">
+                    <span className="text-sm font-semibold mb-2">Diagrama de la red P2P</span>
+                    <svg className="h-24 w-24 text-primary" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-4.41 8-8 8z" />
+                    </svg>
+                  </div>
                 </div>
-                <div className="flex items-center space-x-3">
-                  <div className="h-2 w-2 rounded-full bg-destructive"></div>
-                  <span>Censorship & geo-restrictions</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <div className="h-2 w-2 rounded-full bg-destructive"></div>
-                  <span>Wasted GPU resources globally</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <div className="h-2 w-2 rounded-full bg-destructive"></div>
-                  <span>Limited model access</span>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="border-primary/20">
-              <CardHeader>
-                <CardTitle className="text-2xl font-[var(--font-heading)] text-primary">
-                  The Infernet Advantage
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <div className="flex items-center space-x-3">
-                  <div className="h-2 w-2 rounded-full bg-primary"></div>
-                  <span>True market competition</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <div className="h-2 w-2 rounded-full bg-primary"></div>
-                  <span>Censorship-resistant inference</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <div className="h-2 w-2 rounded-full bg-primary"></div>
-                  <span>Monetize your idle hardware</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <div className="h-2 w-2 rounded-full bg-primary"></div>
-                  <span>Access any model, anywhere</span>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* How It Works Section */}
-      <section id="how-it-works" className="py-20 px-4">
-        <div className="container mx-auto max-w-6xl">
-          <h2 className="text-4xl font-bold font-[var(--font-heading)] text-center mb-16">How It Works</h2>
-          <div className="grid md:grid-cols-5 gap-8">
-            {[
-              { step: "1", title: "Provider Onboarding", desc: "Register your GPU node using a simple CLI command" },
-              {
-                step: "2",
-                title: "On-Chain Discovery",
-                desc: "Node availability and pricing registered on Base smart contract",
-              },
-              { step: "3", title: "Client Request", desc: "Developers use SDK to find the best provider" },
-              { step: "4", title: "Atomic Micropayment", desc: "Per-request payment sent instantly via X402" },
-              {
-                step: "5",
-                title: "Trustless Execution",
-                desc: "Provider performs inference and returns verified result",
-              },
-            ].map((item, index) => (
-              <div key={index} className="text-center">
-                <div className="h-16 w-16 rounded-full bg-gradient-to-r from-primary to-secondary flex items-center justify-center text-2xl font-bold mx-auto mb-4 glow">
-                  {item.step}
-                </div>
-                <h3 className="text-lg font-semibold font-[var(--font-heading)] mb-2">{item.title}</h3>
-                <p className="text-sm text-muted-foreground">{item.desc}</p>
               </div>
-            ))}
+            </div>
           </div>
         </div>
       </section>
 
-      {/* For Developers Section */}
-      <section id="developers" className="py-20 px-4 bg-card/50">
-        <div className="container mx-auto max-w-4xl">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold font-[var(--font-heading)] mb-4">Build on the Infernet Protocol</h2>
-            <p className="text-xl text-muted-foreground">Seamless integration for dApps and AI agents</p>
-          </div>
+      {/* Problem & Solution Section */}
+      <section className="container mx-auto px-4 py-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+          {/* Left Card: The Problem */}
+          <Card className="border-destructive/20">
+            <CardHeader>
+              <CardTitle className="text-2xl font-[var(--font-heading)] text-destructive">
+                The Centralized Bottleneck
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              {[
+                "Fixed pricing and high costs",
+                "Censorship & geo-restrictions",
+                "Wasted GPU resources globally",
+                "Limited model access",
+              ].map((problem, i) => (
+                <div key={i} className="flex items-center space-x-3">
+                  <div className="h-2 w-2 rounded-full bg-destructive" />
+                  <span>{problem}</span>
+                </div>
+              ))}
+            </CardContent>
+          </Card>
 
+          {/* Right Card: The Solution */}
           <Card className="border-primary/20">
             <CardHeader>
-              <CardTitle className="text-primary">SDK Integration Example</CardTitle>
+              <CardTitle className="text-2xl font-[var(--font-heading)] text-primary">
+                The Infernet Advantage
+              </CardTitle>
             </CardHeader>
-            <CardContent>
-              <pre className="bg-background p-4 rounded-lg text-sm overflow-x-auto">
-                <code className="text-primary">{`import { InfernetClient } from '@infernet/sdk'
-
-const client = new InfernetClient({
-  network: 'base',
-  apiKey: process.env.INFERNET_API_KEY
-})
-
-// Find available providers
-const providers = await client.findProviders({
-  model: 'llama-2-7b',
-  maxPrice: 0.001,
-  region: 'us-east'
-})
-
-// Execute inference
-const result = await client.inference({
-  provider: providers[0].id,
-  prompt: 'Explain quantum computing',
-  maxTokens: 100
-})
-
-console.log(result.output)`}</code>
-              </pre>
+            <CardContent className="space-y-4">
+              {[
+                "Pay-as-you-go & competitive pricing",
+                "Censorship-resistant access",
+                "Utilize underused global compute",
+                "Access to cutting-edge models",
+              ].map((benefit, i) => (
+                <div key={i} className="flex items-center space-x-3">
+                  <div className="h-2 w-2 rounded-full bg-primary" />
+                  <span>{benefit}</span>
+                </div>
+              ))}
             </CardContent>
           </Card>
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="py-12 px-4 border-t border-border">
-        <div className="container mx-auto max-w-6xl">
-          <div className="grid md:grid-cols-4 gap-8">
-            <div>
-              <div className="flex items-center space-x-2 mb-4">
-                <div className="h-6 w-6 rounded bg-gradient-to-r from-primary to-secondary"></div>
-                <span className="text-lg font-bold font-[var(--font-heading)]">Infernet</span>
+      {/* Features Section */}
+      <div className="mt-16 py-12 md:py-20 lg:py-24">
+        <div className="container mx-auto text-center max-w-6xl">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-[var(--font-heading)] mb-12">
+            Features that Transform the Market
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Card 1: Instant Payments */}
+            <div className="bg-card border border-border/50 rounded-xl p-6 shadow-lg transform transition-transform duration-300 hover:scale-105">
+              <div className="flex items-center justify-center size-12 mb-4 rounded-full bg-primary/20 text-primary">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M21 12V7H5a2 2 0 0 1 0-4h16v2a2 2 0 0 0 2-2v4h-4a2 2 0 0 1 0-4h4V3a2 2 0 0 0 2-2H2a2 2 0 0 0-2 2v20a2 2 0 0 0 2 2h20v-2h-4a2 2 0 0 1 0-4h4v-4h-4a2 2 0 0 1 0-4h4V12h-4a2 2 0 0 1 0-4h4V7a2 2 0 0 0-2-2h-4a2 2 0 0 1 0-4h4a2 2 0 0 0 2-2H2a2 2 0 0 0-2 2v20a2 2 0 0 0 2 2h20v-2h-4a2 2 0 0 1 0-4h4v-4h-4a2 2 0 0 1 0-4h4V12z" />
+                </svg>
               </div>
-              <p className="text-sm text-muted-foreground">
-                Decentralized AI inference network for the future of compute.
-              </p>
+              <h3 className="text-xl font-semibold mb-2 text-foreground">Per-Request Payments (X402)</h3>
+              <p className="text-muted-foreground">Pay only for the inference you use, with instant transactions and no need for intermediaries.</p>
             </div>
-            <div>
-              <h3 className="font-semibold mb-4">Product</h3>
-              <ul className="space-y-2 text-sm text-muted-foreground">
-                <li>
-                  <a href="#" className="hover:text-accent transition-colors">
-                    Features
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-accent transition-colors">
-                    Pricing
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-accent transition-colors">
-                    Documentation
-                  </a>
-                </li>
-              </ul>
+
+            {/* Card 2: Decentralized Network */}
+            <div className="bg-card border border-border/50 rounded-xl p-6 shadow-lg transform transition-transform duration-300 hover:scale-105">
+              <div className="flex items-center justify-center size-12 mb-4 rounded-full bg-secondary/20 text-secondary">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M12 2L2 7V17L12 22L22 17V7L12 2Z" />
+                  <path d="M12 2V22" />
+                  <path d="M2 7L12 12L22 7" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold mb-2 text-foreground">Permissionless Marketplace</h3>
+              <p className="text-muted-foreground">Our on-chain smart contract allows anyone to join the network, creating an open and censorship-resistant ecosystem.</p>
             </div>
-            <div>
-              <h3 className="font-semibold mb-4">Developers</h3>
-              <ul className="space-y-2 text-sm text-muted-foreground">
-                <li>
-                  <a href="#" className="hover:text-accent transition-colors">
-                    API Reference
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-accent transition-colors">
-                    SDK
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-accent transition-colors">
-                    Examples
-                  </a>
-                </li>
-              </ul>
+
+            {/* Card 3: Monetize Hardware */}
+            <div className="bg-card border border-border/50 rounded-xl p-6 shadow-lg transform transition-transform duration-300 hover:scale-105">
+              <div className="flex items-center justify-center size-12 mb-4 rounded-full bg-accent/20 text-accent">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M16 4H8a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2z" />
+                  <path d="M12 18h.01" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold mb-2 text-foreground">Efficient Monetization</h3>
+              <p className="text-muted-foreground">Turn your idle GPU into a valuable asset. Providers earn directly from developers for every successful inference.</p>
             </div>
-            <div>
-              <h3 className="font-semibold mb-4">Community</h3>
-              <ul className="space-y-2 text-sm text-muted-foreground">
-                <li>
-                  <a href="#" className="hover:text-accent transition-colors">
-                    Discord
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-accent transition-colors">
-                    Twitter
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-accent transition-colors">
-                    GitHub
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div className="mt-8 pt-8 border-t border-border text-center text-sm text-muted-foreground">
-            © 2025 Infernet. All rights reserved.
           </div>
         </div>
-      </footer>
+      </div>
     </div>
-  )
+  );
 }
