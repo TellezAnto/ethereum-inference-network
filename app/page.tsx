@@ -1,42 +1,9 @@
+import React from "react";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-background text-foreground">
-      {/* Header */}
-      <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="container mx-auto flex h-16 items-center justify-between px-4">
-          <div className="flex items-center space-x-2">
-            <div className="h-8 w-8 rounded bg-gradient-to-r from-primary to-secondary" />
-            <span className="text-xl font-bold font-[var(--font-heading)]">
-              Infernet
-            </span>
-          </div>
-          <nav className="hidden md:flex items-center space-x-6">
-            <a
-              href="#how-it-works"
-              className="text-muted-foreground hover:text-accent transition-colors"
-            >
-              How It Works
-            </a>
-            <a
-              href="#developers"
-              className="text-muted-foreground hover:text-accent transition-colors"
-            >
-              For Developers
-            </a>
-            <a
-              href="#features"
-              className="text-muted-foreground hover:text-accent transition-colors"
-            >
-              Features
-            </a>
-            <Button className="glow">Get Started</Button>
-          </nav>
-        </div>
-      </header>
-
       {/* Hero Section - The big intro */}
 
       <div className="container mx-auto max-w-7xl">
@@ -50,7 +17,7 @@ export default function Home() {
               The Global Compute Layer for the Onchain World.
             </p>
             <p className="text-lg mb-8 text-muted-foreground max-w-2xl lg:max-w-none mx-auto lg:mx-0">
-              Infernet is a permissionless P2P network connecting idle GPU power
+              ETH Iinference Network is a permissionless P2P network connecting idle GPU power
               with AI agents and developers, enabling dynamic pricing and
               trustless, per-request micropayments.
             </p>

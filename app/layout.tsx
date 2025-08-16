@@ -2,6 +2,8 @@ import type React from "react"
 import type { Metadata } from "next"
 import { Work_Sans, Open_Sans } from "next/font/google"
 import "./globals.css"
+import { Button } from "@/components/ui/button"
+import Logo from "@/components/Logo"
 
 const workSans = Work_Sans({
   subsets: ["latin"],
@@ -16,7 +18,7 @@ const openSans = Open_Sans({
 })
 
 export const metadata: Metadata = {
-  title: "Infernet - Decentralized AI Inference Network",
+  title: "E I N - Decentralized AI Inference Network",
   description: "A permissionless P2P network connecting idle GPU power with AI agents and developers",
   generator: "v0.app",
 }
@@ -37,7 +39,40 @@ html {
 }
         `}</style>
       </head>
-      <body className="dark">{children}</body>
+      <body className="dark">
+        <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+          <div className="container mx-auto flex h-16 items-center justify-between px-4">
+            <div className="flex items-center space-x-2">
+            <Logo/>
+              <span className="text-xl font-bold font-[var(--font-heading)]">
+                EIN
+              </span>
+            </div>
+            <nav className="hidden md:flex items-center space-x-6">
+              <a
+                href="/#how-it-works"
+                className="text-muted-foreground hover:text-accent transition-colors"
+              >
+                How It Works
+              </a>
+              <a
+                href="/#developers"
+                className="text-muted-foreground hover:text-accent transition-colors"
+              >
+                For Developers
+              </a>
+              <a
+                href="/#features"
+                className="text-muted-foreground hover:text-accent transition-colors"
+              >
+                Features
+              </a>
+              <Button className="glow">Get Started</Button>
+            </nav>
+          </div>
+        </header>
+        {children}
+      </body>
     </html>
   )
 }
