@@ -2,7 +2,6 @@ import type React from "react"
 import type { Metadata } from "next"
 import { Work_Sans, Open_Sans } from "next/font/google"
 import "./globals.css"
-import { Button } from "@/components/ui/button"
 import Logo from "@/components/Logo"
 import Link from "next/link"
 
@@ -68,7 +67,6 @@ html {
               >
                 Browse Models
               </a>
-              <Button className="glow">Get Started</Button>
             </nav>
           </div>
         </header>
