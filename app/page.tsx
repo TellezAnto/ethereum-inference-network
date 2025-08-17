@@ -85,7 +85,7 @@ export default function Home() {
       </section>
 
       {/* Pricing Showcase Section */}
-      <section className="py-16 md:py-24 bg-gradient-to-r from-primary/5 via-background to-secondary/5 relative">
+      <section id="pricing" className="py-16 md:py-24 bg-gradient-to-r from-primary/5 via-background to-secondary/5 relative">
         <div className="container mx-auto max-w-6xl px-4 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold font-[var(--font-heading)] mb-4 text-foreground">
             Simple, Transparent Pricing
@@ -127,7 +127,7 @@ export default function Home() {
       </section>
 
       {/* Features Section */}
-      <section className="py-16 md:py-24 lg:py-32 relative">
+      <section id="features" className="py-16 md:py-24 lg:py-32 relative">
         <div className="container mx-auto text-center max-w-6xl px-4">
           <div className="mb-16">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-[var(--font-heading)] mb-6">

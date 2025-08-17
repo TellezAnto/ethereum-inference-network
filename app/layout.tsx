@@ -4,6 +4,7 @@ import { Work_Sans, Open_Sans } from "next/font/google"
 import "./globals.css"
 import { Button } from "@/components/ui/button"
 import Logo from "@/components/Logo"
+import Link from "next/link"
 
 const workSans = Work_Sans({
   subsets: ["latin"],
@@ -42,12 +43,12 @@ html {
       <body className="dark">
         <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
           <div className="container mx-auto flex h-16 items-center justify-between px-4">
-            <div className="flex items-center space-x-2">
+            <Link href={"/"} className="flex items-center space-x-2">
             <Logo/>
               <span className="text-xl font-bold font-[var(--font-heading)]">
                 EIN
               </span>
-            </div>
+            </Link>
             <nav className="hidden md:flex items-center space-x-6">
               <a
                 href="/#pricing"
