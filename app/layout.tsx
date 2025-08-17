@@ -50,22 +50,22 @@ html {
             </div>
             <nav className="hidden md:flex items-center space-x-6">
               <a
-                href="/#how-it-works"
+                href="/#pricing"
                 className="text-muted-foreground hover:text-accent transition-colors"
               >
-                How It Works
-              </a>
-              <a
-                href="/#developers"
-                className="text-muted-foreground hover:text-accent transition-colors"
-              >
-                For Developers
+                Pricing
               </a>
               <a
                 href="/#features"
                 className="text-muted-foreground hover:text-accent transition-colors"
               >
                 Features
+              </a>
+              <a
+                href="/open-router"
+                className="text-muted-foreground hover:text-accent transition-colors"
+              >
+                Browse Models
               </a>
               <Button className="glow">Get Started</Button>
             </nav>

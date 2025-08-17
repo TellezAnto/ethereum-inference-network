@@ -21,21 +21,6 @@ export const middleware = paymentMiddleware(
         },
       },
     },
-    "/api/walrus": {
-      price: "$0.009",
-      network: "base-sepolia",
-      config: {
-        description: "Walrus storage",
-        mimeType: "application/json",
-        maxTimeoutSeconds: 30,
-        outputSchema: {
-          type: "object",
-          properties: {
-            url: { type: "string" },
-          },
-        },
-      },
-    },
     "/api/open-router": {
       price: "$0.009",
       network: "base-sepolia",
