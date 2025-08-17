@@ -6,11 +6,11 @@ export const middleware = paymentMiddleware(
   (process.env.PAYMENT_RECEIVING_WALLET_ADDRESS ||
     "0x0000000000000000000000000000000000000000") as `0x${string}`,
   {
-    "/api/asi": {
+    "/api/asi/chat/completions": {
       price: "$0.009",
       network: "base-sepolia",
       config: {
-        description: "ASI inference",
+        description: "ASI chat inference",
         mimeType: "application/json",
         maxTimeoutSeconds: 30,
         outputSchema: {

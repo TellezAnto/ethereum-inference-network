@@ -12,6 +12,15 @@ export async function POST(request: NextRequest) {
       );
     }
 
+    // Transform the request body to match ASI API requirements
+    const asiRequestBody = {
+      model: 'asi1-mini', // Always use asi1-mini for ASI API
+      messages: body.messages || [],
+      temperature: body.temperature ?? 0.7,
+      stream: body.stream ?? false,
+      max_tokens: body.max_tokens ?? 1024,
+    };
+
     const asiUrl = 'https://api.asi1.ai/v1/chat/completions';
 
     const response = await fetch(asiUrl, {
@@ -20,7 +29,7 @@ export async function POST(request: NextRequest) {
         'Authorization': `Bearer ${asiApiKey}`,
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify(body),
+      body: JSON.stringify(asiRequestBody),
     });
 
     if (!response.ok) {
