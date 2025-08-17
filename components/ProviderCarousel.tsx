@@ -10,7 +10,7 @@ interface Provider {
 }
 
 const providers: Provider[] = [
-  { name: "OpenAI", logoPath: "/openai.png", gradient: "from-#080808 to-green-600" },
+  { name: "OpenAI", logoPath: "/openai.png", gradient: "from-[#74AA9C] to-gray-700" },
   { name: "Anthropic", logoPath: "/anthropic.png", gradient: "from-orange-400 to-red-500" },
   { name: "Deepseek", logoPath: "/deepseek.png", gradient: "from-white to-white" },
   { name: "ASI Alliance", logoPath: "/asi.webp", gradient: "from-white to-white" },
