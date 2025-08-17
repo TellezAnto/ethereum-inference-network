@@ -51,19 +51,19 @@ html {
             <nav className="hidden md:flex items-center space-x-6">
               <a
                 href="/#pricing"
-                className="text-muted-foreground hover:text-accent transition-colors"
+                className="text-muted-foreground hover:text-primary transition-colors"
               >
                 Pricing
               </a>
               <a
                 href="/#features"
-                className="text-muted-foreground hover:text-accent transition-colors"
+                className="text-muted-foreground hover:text-primary transition-colors"
               >
                 Features
               </a>
               <a
                 href="/open-router"
-                className="text-muted-foreground hover:text-accent transition-colors"
+                className="text-muted-foreground hover:text-primary transition-colors"
               >
                 Browse Models
               </a>

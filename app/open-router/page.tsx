@@ -48,7 +48,7 @@ export default function EndpointsPage() {
   useEffect(() => {
     const fetchModels = async () => {
       try {
-        const response = await fetch('/api/open-router/list-endpoints')
+        const response = await fetch('api/list')
         if (!response.ok) {
           throw new Error(`Failed to fetch models: ${response.statusText}`)
         }
@@ -96,7 +96,7 @@ export default function EndpointsPage() {
     <div className="min-h-screen bg-background text-foreground">
       <div className="container mx-auto px-4 py-8">
         <h1 className="text-3xl font-bold font-[var(--font-heading)] mb-8">Available Models</h1>
-        
+
         <Card>
           <CardHeader>
             <CardTitle>OpenRouter Models ({models.length})</CardTitle>
