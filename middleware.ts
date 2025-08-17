@@ -21,11 +21,11 @@ export const middleware = paymentMiddleware(
         },
       },
     },
-    "/api/open-router": {
+    "/api/open-router/**": {
       price: "$0.009",
       network: "base-sepolia",
       config: {
-        description: "Walrus storage",
+        description: "Open Router inference",
         mimeType: "application/json",
         maxTimeoutSeconds: 30,
         outputSchema: {
